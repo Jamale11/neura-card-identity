@@ -2,23 +2,23 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url('neura.jpg');
+  background-color: #0a0a0a;
+  background-image: url('neura.jpg'); /* opsional: bisa pakai bg kamu */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Poppins', sans-serif;
   color: white;
 }
 
 .container {
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #00ff99;
   width: 90%;
   max-width: 400px;
 }
@@ -34,34 +34,76 @@ input {
 }
 
 button {
-  background-color: #00ffff;
+  background-color: #00ff99;
   border: none;
   padding: 12px 30px;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
   transition: 0.3s;
 }
 
 button:hover {
-  background-color: #00cccc;
+  background-color: #00cc77;
 }
 
 .card {
-  margin-top: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #00ffff;
-  border-radius: 12px;
+  position: relative;
+  margin: 20px auto;
+  width: 340px;
+  height: 200px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  box-shadow: 0 0 20px rgba(0,255,150,0.3);
   padding: 20px;
+  text-align: left;
+  overflow: hidden;
 }
 
-.card h2 {
-  margin: 0 0 10px;
-  color: #00ffff;
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
-.card p {
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.card-header h2 {
+  color: #00ff99;
   font-size: 18px;
-  margin: 6px 0;
+  margin: 0;
 }
 
+.card-body {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.label {
+  color: #aaa;
+  width: 90px;
+  display: inline-block;
+}
+
+.neura-id {
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+#qrcode {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  font-size: 10px;
+  color: #777;
+}
