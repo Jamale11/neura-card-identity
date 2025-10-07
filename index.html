@@ -10,12 +10,11 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="glow-text">NEURA ID CARD</h1>
+    <h1 class="title">NEURA ID GENERATOR</h1>
     <input type="text" id="username" placeholder="Enter your username">
     <button id="generateBtn">Generate Neura ID</button>
 
     <div id="card" class="card" style="display:none;">
-      <div class="card-glow"></div>
       <div class="card-header">
         <img src="neura-logo.jpg" alt="Neura Logo" class="logo">
         <h2>Neura Member</h2>
@@ -23,13 +22,13 @@
 
       <div class="card-body">
         <p><span class="label">Name:</span> <span id="card-username"></span></p>
-        <p><span class="label">Status:</span> <span id="card-status">Neura Id Member</span></p>
+        <p><span class="label">Status:</span> Neura Early Member</p>
         <p><span class="label">ID:</span> <span id="card-id" class="neura-id"></span></p>
         <p><span class="label">Verification:</span> ✅ Verified</p>
       </div>
 
       <div id="qrcode"></div>
-      <p class="footer">neura protocol</p>
+      <p class="footer"></p>
     </div>
 
     <button id="downloadBtn" style="display:none;">Download as PNG</button>
