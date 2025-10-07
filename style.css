@@ -120,7 +120,7 @@ button:hover {
 #qrcode {
   position: absolute;
   right: 15px;
-  bottom: 15px;
+  bottom: 10px;
 }
 
 .footer {
@@ -133,7 +133,7 @@ button:hover {
 }
 .powered {
   position: absolute;
-  bottom: 5px;
+  bottom: 1px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
