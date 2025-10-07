@@ -1,1 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('neura.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 400px;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+button {
+  background-color: #00ffff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #00cccc;
+}
+
+.card {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #00ffff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  color: #00ffff;
+}
+
+.card p {
+  font-size: 18px;
+  margin: 6px 0;
+}
 
