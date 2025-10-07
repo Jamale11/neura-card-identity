@@ -95,14 +95,22 @@ button:hover {
 
 .card-body {
   margin-top: 10px;
-  line-height: 1.5;
+  line-height: 1.6;
+  display: grid;
+  grid-template-columns: 110px 1fr; /* lebar kolom label dan isi */
+  row-gap: 6px;
 }
 
 .label {
   color: #aaa;
-  width: 90px;
-  display: inline-block;
+  text-align: left;
 }
+
+.card-body p {
+  margin: 0;
+  display: contents; /* biar grid tetap rapi */
+}
+
 
 .neura-id {
   color: #00ffee;
