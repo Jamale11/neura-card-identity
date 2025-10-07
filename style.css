@@ -1,64 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #0a0a0a;
-  background-image: url('neura.jpg'); /* opsional: bisa pakai bg kamu */
-  background-size: cover;
-  background-position: center;
+  background: radial-gradient(circle at top, #000000 0%, #020202 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
   color: white;
+  overflow: hidden;
+}
+
+/* background particle glow */
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: repeating-radial-gradient(
+    circle at center,
+    rgba(0,255,150,0.1) 0%,
+    transparent 20%
+  );
+  animation: pulse 8s infinite linear;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .container {
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 0 20px #00ff99;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,255,150,0.3);
   width: 90%;
-  max-width: 400px;
+  max-width: 420px;
+  backdrop-filter: blur(10px);
+}
+
+.glow-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ff88;
+  animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { text-shadow: 0 0 10px #00ffcc; }
+  to { text-shadow: 0 0 25px #00ffaa, 0 0 50px #00ffcc; }
 }
 
 input {
   width: 80%;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 12px;
+  margin: 12px 0;
   border-radius: 8px;
   border: none;
-  font-size: 16px;
   text-align: center;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 16px;
 }
 
 button {
-  background-color: #00ff99;
+  background: linear-gradient(90deg, #00ffaa, #00ccff);
   border: none;
-  padding: 12px 30px;
-  border-radius: 10px;
+  padding: 12px 35px;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.4s;
+  color: #000;
 }
 
 button:hover {
-  background-color: #00cc77;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffaa;
 }
 
 .card {
   position: relative;
-  margin: 20px auto;
+  margin: 25px auto;
   width: 340px;
   height: 200px;
   border-radius: 16px;
-  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
-  box-shadow: 0 0 20px rgba(0,255,150,0.3);
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d0d0d, #1b1b1b);
+  box-shadow: 0 0 30px rgba(0,255,150,0.2);
   padding: 20px;
   text-align: left;
-  overflow: hidden;
+}
+
+.card-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,255,150,0.2), rgba(0,255,255,0.2));
+  animation: moveGlow 5s linear infinite;
+  filter: blur(25px);
+}
+
+@keyframes moveGlow {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(50%); }
 }
 
 .card-header {
@@ -68,19 +118,22 @@ button:hover {
 }
 
 .logo {
-  width: 40px;
+  width: 45px;
   margin-right: 10px;
+  filter: drop-shadow(0 0 10px #00ff99);
 }
 
 .card-header h2 {
-  color: #00ff99;
-  font-size: 18px;
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffcc;
   margin: 0;
 }
 
 .card-body {
   margin-top: 10px;
   line-height: 1.5;
+  position: relative;
+  z-index: 1;
 }
 
 .label {
@@ -90,7 +143,7 @@ button:hover {
 }
 
 .neura-id {
-  color: #00ffcc;
+  color: #00ffee;
   font-weight: bold;
 }
 
@@ -98,6 +151,7 @@ button:hover {
   position: absolute;
   right: 15px;
   bottom: 15px;
+  z-index: 2;
 }
 
 .footer {
@@ -105,5 +159,6 @@ button:hover {
   bottom: 5px;
   left: 15px;
   font-size: 10px;
-  color: #777;
+  color: #999;
+  font-family: 'Orbitron', sans-serif;
 }
