@@ -30,7 +30,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     text: neuraId,
     width: 50,
     height: 50,
-    colorDark: "#00ff99",
+    colorDark: "#00ffcc",
     colorLight: "transparent",
     correctLevel: QRCode.CorrectLevel.H
   });
@@ -44,7 +44,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
 function downloadCardAsPNG(card, username) {
   html2canvas(card, { backgroundColor: null }).then(canvas => {
     const link = document.createElement('a');
-    link.download = `${username}_neura_id.png`;
+    link.download = `${username}_NeuraID.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
   });
