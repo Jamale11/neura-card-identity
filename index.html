@@ -5,13 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Neura ID Generator</title>
   <link rel="stylesheet" href="style.css">
+  <!-- html2canvas untuk capture elemen menjadi gambar -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
   <div class="container">
     <h1>Neura ID Generator</h1>
-    <p>Click the button below to generate your unique Neura ID.</p>
+    <p>Enter your username to generate your Neura ID card.</p>
+
+    <input type="text" id="username" placeholder="Enter your username">
     <button id="generateBtn">Generate ID</button>
-    <div id="output"></div>
+
+    <div id="card" class="card" style="display:none;">
+      <h2>NEURA ID CARD</h2>
+      <p id="card-username"></p>
+      <p id="card-id"></p>
+    </div>
+
+    <button id="downloadBtn" style="display:none;">Download PNG</button>
   </div>
 
   <script src="script.js"></script>
