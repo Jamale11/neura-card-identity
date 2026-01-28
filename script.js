@@ -4,7 +4,7 @@ function generateNeuraID() {
   for (let i = 0; i < 5; i++) {
     id += chars.charAt(Math.floor(Math.random() * chars.length));
   }
-  return 'NEURA-' + id;
+  return 'SPPG-' + id;
 }
 
 document.getElementById('generateBtn').addEventListener('click', () => {
