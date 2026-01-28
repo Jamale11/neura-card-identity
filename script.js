@@ -4,7 +4,7 @@ function generateNeuraID() {
   for (let i = 0; i < 5; i++) {
     id += chars.charAt(Math.floor(Math.random() * chars.length));
   }
-  return 'SPPG-' + id;
+  return 'NEURA-' + id;
 }
 
 document.getElementById('generateBtn').addEventListener('click', () => {
@@ -20,7 +20,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
   const qrcodeContainer = document.getElementById('qrcode');
   const downloadBtn = document.getElementById('downloadBtn');
 
-  const neuraId = generateSppgID();
+  const neuraId = generateNeuraID();
 
   cardUsername.textContent = username;
   cardId.textContent = neuraId;
@@ -44,7 +44,7 @@ document.getElementById('generateBtn').addEventListener('click', () => {
 function downloadCardAsPNG(card, username) {
   html2canvas(card, { backgroundColor: null }).then(canvas => {
     const link = document.createElement('a');
-    link.download = `${username}_SPPG-ID.png`;
+    link.download = `${username}_NEURA-ID.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
   });
